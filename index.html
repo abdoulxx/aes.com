@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AES - Association des Étudiants Start-ups</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <img src="AES.jpg" alt="Logo AES" class="logo">
+            <nav>
+                <div class="menu-icon" onclick="toggleMenu()">&#9776;</div>
+                <ul id="menu" class="menu">
+                    <li><a href="#accueil">Accueil</a></li>
+                    <li><a href="#about">À Propos</a></li>
+                    <li><a href="#events">Événements</a></li>
+                    <li><a href="#team">Membres</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <section id="accueil" class="hero">
+        <div class="container">
+            <h2>Innover, Créer, Inspirer</h2>
+            <h3>Unissez vos talents, transformez vos idées en succès, et façonnez l'avenir de l'entrepreneuriat étudiant.</h3>
+            <a href="#about" class="cta-button">Découvrir l'AES</a>
+        </div>
+    </section>
+
+    <!-- Section About -->
+    <section id="about" class="about">
+        <div class="container">
+            <h2>À Propos de l'AES</h2>
+            <p>L'Association des Étudiants Start-ups (AES) est une communauté dynamique qui promeut l'entrepreneuriat parmi les étudiants. Notre mission est de fournir un espace où les jeunes innovateurs peuvent collaborer, apprendre, et transformer leurs idées en entreprises prospères.</p>
+        </div>
+    </section>
+
+    <!-- Section Événements -->
+    <section id="events" class="events">
+        <div class="container">
+            <h2>Événements à Venir</h2>
+            <div class="event-list">
+                <div class="event">
+                    <img src="jj.png"Journée Entrepreneuriale" class="event-image">
+                    <h3>Journée Entrepreneuriale</h3>
+                    <span class="event-date">15 octobre 2024</span>
+                    <p>Assistez à des conférences inspirantes avec des entrepreneurs à succès et des leaders de l'industrie.</p>
+                    <a href="#" class="cta-button">En savoir plus</a>
+                </div>
+                <div class="event">
+                    <img src="bientot.png" alt="Conférence Start-up Innov" class="event-image">
+                    <h3>Concours d'innovation</h3>
+                    <span class="event-date">31 Mai 2024</span>
+                    <p>Déclenche ta créativité et transforme tes idées en réalité lors de notre Journée de Concours pour l'Innovation ! Rejoins-nous pour une expérience inspirante et fais la différence avec tes projets révolutionnaires.</p>
+                    <a href="#" class="cta-button">En savoir plus</a>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+
+    <!-- Section Membres -->
+    <section id="team" class="team">
+        <div class="container">
+            <h2>Notre Équipe</h2>
+            <p>Rencontrez les esprits brillants derrière l'AES.</p>
+            <div class="team-list">
+                <div class="team-member">
+                    <img src="entre1.png" alt="Membre 1">
+                    <h3>KASSI CHRISTIAN JOHAN</h3>
+                    <p>Président</p>
+                </div>
+                <div class="team-member">
+                    <img src="entre2.png" alt="Membre 2">
+                    <h3>GBORO OTHINIEL MATIANE</h3>
+                    <p>Vice-présidente</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Section Contact -->
+    <section id="contact" class="contact">
+        <div class="container">
+            <h2>Contactez-Nous</h2>
+            <p>Pour plus d'informations ou pour rejoindre l'AES, n'hésitez pas à nous contacter.</p>
+            <form>
+                <input type="text" name="name" placeholder="Votre nom" required>
+                <input type="email" name="email" placeholder="Votre email" required>
+                <textarea name="message" placeholder="Votre message" required></textarea>
+                <button type="submit" class="cta-button">Envoyer</button>
+            </form>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2024 AES - Association des Étudiants Start-ups. Tous droits réservés.</p>
+            <ul class="socials">
+                <li><a href="#">Facebook</a></li>
+                <li><a href="#">Twitter</a></li>
+                <li><a href="#">LinkedIn</a></li>
+            </ul>
+        </div>
+    </footer>
+
+    <script>
+        function toggleMenu() {
+            const menu = document.getElementById('menu');
+            menu.classList.toggle('active');
+        }
+    
+        document.querySelectorAll('#menu a').forEach(link => {
+            link.addEventListener('click', () => {
+                const menu = document.getElementById('menu');
+                menu.classList.remove('active');
+            });
+        });
+    </script>
+    
+</body>
+</html>

@@ -1,0 +1,354 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Lato', sans-serif;
+    background-color: #ffffff;
+    color: #333333;
+    line-height: 1.6;
+}
+
+header {
+    background-color: #0d1f5c;
+    color: #ffffff;
+    padding: 20px 0;
+    border-bottom: 4px solid #d4af37;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1000;
+}
+
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    max-height: 50px;
+}
+
+nav {
+    position: relative;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+}
+
+nav ul li {
+    display: inline;
+}
+
+nav a {
+    color: #d4af37;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 18px;
+    transition: color 0.3s;
+}
+
+nav a:hover {
+    color: #ffffff;
+}
+
+.menu-icon {
+    font-size: 30px;
+    display: none;
+    color: #d4af37;
+    cursor: pointer;
+}
+
+.hero {
+    background: url('asso22.png') no-repeat center center/cover;
+    color: #ffffff;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding-top: 80px; /* Compense le header fixe */
+    position: relative;
+    z-index: 1;
+}
+
+.hero::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: inherit;
+    filter: blur(3px); /* Ajustez le niveau de flou ici */
+    z-index: -1;
+    transform: scale(1.05); /* Évite les bords vides dus au flou */
+}
+
+.hero h1,
+.hero p {
+    position: relative;
+    z-index: 1;
+}
+
+
+.hero h1 {
+    font-size: 48px;
+    margin-bottom: 20px;
+}
+
+.hero h2 {
+    color: #d4af37;
+}
+
+.hero p {
+    font-size: 24px;
+    margin-bottom: 30px;
+}
+
+.cta-button {
+    background-color: #d4af37;
+    color: #0d1f5c;
+    padding: 15px 30px;
+    text-decoration: none;
+    font-weight: bold;
+    border-radius: 5px;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.cta-button:hover {
+    background-color: #b9982b;
+    color: #ffffff;
+}
+
+section {
+    padding: 60px 0;
+    background-color: #f8f8f8;
+    text-align: center;
+}
+
+section h2 {
+    font-size: 36px;
+    margin-bottom: 20px;
+    color: #0d1f5c;
+}
+
+section p {
+    font-size: 18px;
+    margin-bottom: 30px;
+    color: #555555;
+}
+
+.event-list, .team-list {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.event, .team-member {
+    background-color: #ffffff;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    max-width: 300px;
+    text-align: center;
+}
+
+.event h3, .team-member h3 {
+    font-size: 24px;
+    margin-bottom: 15px;
+    color: #0d1f5c;
+}
+
+.event p, .team-member p {
+    font-size: 16px;
+    color: #555555;
+    margin-bottom: 20px;
+}
+
+.team-member img {
+    max-width: 100%;
+    border-radius: 50%;
+    margin-bottom: 15px;
+}
+
+.contact form {
+    max-width: 600px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.contact input, .contact textarea {
+    padding: 15px;
+    font-size: 16px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+}
+
+.contact button {
+    background-color: #d4af37;
+    color: #ffffff;
+    padding: 15px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 18px;
+    transition: background-color 0.3s ease;
+}
+
+.contact button:hover {
+    background-color: #b9982b;
+}
+
+footer {
+    background-color: #0d1f5c;
+    color: #ffffff;
+    padding: 20px 0;
+    text-align: center;
+    border-top: 4px solid #d4af37;
+}
+
+footer p {
+    margin-bottom: 10px;
+}
+
+footer .socials {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    padding: 0;
+}
+
+footer .socials li {
+    display: inline;
+}
+
+footer a {
+    color: #d4af37;
+    text-decoration: none;
+    font-size: 18px;
+    transition: color 0.3s ease;
+}
+
+footer a:hover {
+    color: #ffffff;
+}
+
+/* Media Queries for Responsiveness */
+@media (max-width: 768px) {
+    .container {
+        flex-direction: column;
+    }
+
+    nav ul {
+        flex-direction: column;
+        background-color: #0d1f5c;
+        position: fixed;
+        top: 0;
+        left: -100%; /* Le menu est caché à gauche hors de la vue */
+        width: 70%; /* Largeur du menu */
+        height: 100%; /* Pour couvrir toute la hauteur de l'écran */
+        transition: left 0.3s ease; /* Transition douce */
+        padding-top: 60px; /* Pour éviter de chevaucher le header */
+    }
+
+    nav ul.active {
+        left: 0; /* Le menu glisse vers la gauche lorsqu'il est activé */
+    }
+
+    nav a {
+        color: #ffffff;
+        padding: 15px;
+        display: block;
+        text-align: center;
+    }
+
+    .menu-icon {
+        display: block;
+        z-index: 2; /* Assure que l'icône du menu est au-dessus du menu */
+    }
+
+    .hero h1 {
+        font-size: 36px;
+    }
+
+    .hero p {
+        font-size: 20px;
+    }
+
+    .event-list, .team-list {
+        flex-direction: column;
+        gap: 20px;
+    }
+}
+
+@media (max-width: 480px) {
+    .hero h1 {
+        font-size: 28px;
+    }
+
+    .hero p {
+        font-size: 18px;
+    }
+
+    .cta-button {
+        padding: 10px 20px;
+        font-size: 16px;
+    }
+
+    section h2 {
+        font-size: 28px;
+    }
+
+    section p {
+        font-size: 16px;
+    }
+}
+.event {
+    position: relative;
+    overflow: hidden;
+    padding: 20px;
+    border-radius: 8px;
+}
+
+.event-image {
+    width: 100%;
+    height: auto;
+    display: block;
+    border-radius: 8px;
+    margin-bottom: 15px;
+}
+
+.event-date {
+    display: block;
+    font-size: 18px;
+    color: #d4af37; /* Couleur d'accentuation pour la date */
+    margin-bottom: 10px;
+    font-weight: bold;
+}
+
+.event h3 {
+    margin-top: 10px;
+    font-size: 24px;
+}
+
+.event p {
+    margin: 10px 0;
+}
+
+.cta-button {
+    margin-top: 10px;
+}
