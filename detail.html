@@ -22,6 +22,7 @@
         </div>
     </header>
     <style>
+        
         @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
         
         body {
@@ -29,7 +30,10 @@
             background-color: #f4f4f4;
             color: #333;
             padding: 20px;
+            margin-left: -20px; /* Ajoute une marge de gauche de 20px */
+            margin-right: -20px;
         }
+        
 
         .summary {
             margin-top: 30px;
@@ -51,6 +55,9 @@
         }
 
         .carousel-item img {
+            margin-left: 10px;
+            margin-top: 10px;
+            margin-left: 20px;
             width: 100%;
             object-fit: cover;
             border-radius: 8px;
@@ -149,7 +156,30 @@
 
 
 </section>
-   
+
+<footer>
+    <div class="container">
+        <p>&copy; 2024 AES - Association des Étudiants Start-ups. Tous droits réservés.</p>
+        <ul class="socials">
+            <li><a href="#">Facebook</a></li>
+            <li><a href="#">Twitter</a></li>
+            <li><a href="#">LinkedIn</a></li>
+        </ul>
+    </div>
+</footer>
+<script>
+    function toggleMenu() {
+        const menu = document.getElementById('menu');
+        menu.classList.toggle('active');
+    }
+
+    document.querySelectorAll('#menu a').forEach(link => {
+        link.addEventListener('click', () => {
+            const menu = document.getElementById('menu');
+            menu.classList.remove('active');
+        });
+    });
+</script>
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
